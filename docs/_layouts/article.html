@@ -12,9 +12,25 @@
 {%- include nav.html -%}
 
 <main id="main" class="article">
-  <aside class="outline" aria-label="文章大纲">
-    <div class="head">本页大纲</div>
-    <ol></ol>
+  <aside class="outline" aria-label="章节导航">
+    <div class="head">
+      <a href="{{ '/sections/' | append: page.section_slug | append: '/' | relative_url }}">{{ page.section_id }} · {{ page.section_name }}</a>
+    </div>
+    <ol class="chapter-nav">
+      {%- for p in site.data.structure.pages -%}
+        {%- if p.section_id == page.section_id -%}
+        <li class="chap{% if p.url == page.url %} active{% endif %}">
+          <a href="{{ p.url | relative_url }}" title="{{ p.title }}">
+            <span class="ord">{{ p.ord }}</span>
+            <span class="t">{{ p.title }}</span>
+          </a>
+          {%- if p.url == page.url -%}
+          <ol class="h2-list" data-h2></ol>
+          {%- endif -%}
+        </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ol>
   </aside>
 
   <article class="body">

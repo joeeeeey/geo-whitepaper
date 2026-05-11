@@ -183,33 +183,35 @@
     window.addEventListener("resize", update);
   }
 
-  /* -------- Outline scrollspy -------- */
+  /* -------- Outline: section chapter nav + active chapter H2 scrollspy -------- */
   function mountOutline() {
-    const list = $(".outline ol");
-    if (!list) return;
-    // Auto-id any h2 that lacks one
+    const outline = $(".outline");
+    if (!outline) return;
+    // Ensure the active chapter row is in view inside the sidebar on load.
+    const activeChap = outline.querySelector(".chap.active");
+    if (activeChap) {
+      const wrap = outline;
+      const r = activeChap.getBoundingClientRect();
+      const wr = wrap.getBoundingClientRect();
+      if (r.top < wr.top || r.bottom > wr.bottom) {
+        wrap.scrollTop = activeChap.offsetTop - 80;
+      }
+    }
+    // Populate the active chapter's H2 sub-list.
+    const subList = outline.querySelector("[data-h2]");
+    if (!subList) return;
     $$(".body h2").forEach((h, i) => {
       if (!h.id) h.id = "h-" + (i + 1);
     });
     const heads = $$(".body h2[id]");
     if (!heads.length) {
-      const outline = $(".outline");
-      if (outline) outline.remove();
-      $(".article")?.classList.add("article--no-outline");
+      subList.remove();
       return;
     }
-    list.innerHTML = heads
-      .map(
-        (h, i) => `
-        <li data-id="${h.id}">
-          <span><span style="color:var(--text-faint);margin-right:8px;">${String(
-            i + 1
-          ).padStart(2, "0")}</span>${h.textContent}</span>
-          <span class="min">${h.dataset.min || ""}</span>
-        </li>`
-      )
+    subList.innerHTML = heads
+      .map((h) => `<li data-id="${h.id}">${h.textContent}</li>`)
       .join("");
-    list.addEventListener("click", (e) => {
+    subList.addEventListener("click", (e) => {
       const li = e.target.closest("li");
       if (!li) return;
       document.getElementById(li.dataset.id)?.scrollIntoView({
@@ -221,7 +223,7 @@
       (entries) => {
         entries.forEach((en) => {
           if (en.isIntersecting) {
-            list.querySelectorAll("li").forEach((li) =>
+            subList.querySelectorAll("li").forEach((li) =>
               li.classList.toggle("active", li.dataset.id === en.target.id)
             );
           }

@@ -345,26 +345,45 @@ section.block:first-of-type { margin-top: 0; }
   box-shadow: 0 0 12px var(--accent-glow);
 }
 .article {
-  max-width: 1128px; margin: 0 auto;
+  max-width: 1180px; margin: 0 auto;
   padding: var(--s-9) clamp(20px, 4vw, 56px) var(--s-12);
-  display: grid; grid-template-columns: 200px minmax(0, 760px);
+  display: grid; grid-template-columns: 240px minmax(0, 760px);
   justify-content: center;
-  gap: var(--s-9); align-items: start;
+  gap: var(--s-8); align-items: start;
 }
 .article--no-outline { grid-template-columns: minmax(0, 760px); }
-.outline { position: sticky; top: 96px; font-family: var(--font-mono); font-size: 12px; max-height: calc(100vh - 120px); overflow-y: auto; }
+.outline { position: sticky; top: 96px; font-family: var(--font-mono); max-height: calc(100vh - 120px); overflow-y: auto; padding-right: var(--s-2); }
+.outline::-webkit-scrollbar { width: 6px; }
+.outline::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
 .outline .head { color: var(--text-faint); text-transform: uppercase; letter-spacing: .12em; margin-bottom: var(--s-3); font-size: 11px; }
-.outline ol { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
-.outline li {
-  padding: 8px var(--s-3); border-left: 2px solid transparent; margin-left: -1px;
-  cursor: pointer; color: var(--text-muted);
-  display: flex; justify-content: space-between; gap: var(--s-3);
-  line-height: 1.4;
+.outline .head a { color: inherit; border-bottom: none; }
+.outline .head a:hover { color: var(--accent); }
+.outline .chapter-nav { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
+.outline .chap { margin: 0; padding: 0; }
+.outline .chap > a {
+  display: grid; grid-template-columns: 38px 1fr; gap: var(--s-2);
+  padding: 6px var(--s-3); color: var(--text-muted);
+  border-left: 2px solid transparent; margin-left: -1px;
+  align-items: baseline; text-decoration: none;
+  transition: color 160ms, border-color 160ms, background 160ms;
 }
-.outline li:hover { color: var(--text-primary); }
-.outline li.active { color: var(--accent); border-left-color: var(--accent); }
-.outline li .min { font-size: 10px; color: var(--text-faint); flex: 0 0 auto; white-space: nowrap; }
-.outline li > span:first-child { flex: 1; min-width: 0; word-break: break-word; }
+.outline .chap > a:hover { color: var(--text-primary); background: color-mix(in oklab, var(--accent) 5%, transparent); }
+.outline .chap.active > a { color: var(--accent); border-left-color: var(--accent); background: color-mix(in oklab, var(--accent) 6%, transparent); }
+.outline .chap .ord { color: var(--text-faint); font-size: 10.5px; letter-spacing: .04em; }
+.outline .chap.active .ord { color: var(--accent); }
+.outline .chap .t {
+  font-family: var(--font-sans); font-size: 12.5px; line-height: 1.45; font-weight: 500;
+  display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden; word-break: break-word;
+}
+.outline .h2-list { list-style: none; padding: 0; margin: 4px 0 var(--s-3); border-left: 1px solid var(--line); margin-left: 28px; }
+.outline .h2-list li {
+  padding: 4px 10px; font-size: 11.5px; color: var(--text-muted); cursor: pointer;
+  border-left: 2px solid transparent; margin-left: -1px; line-height: 1.4;
+  transition: color 160ms, border-color 160ms;
+}
+.outline .h2-list li:hover { color: var(--text-primary); }
+.outline .h2-list li.active { color: var(--accent); border-left-color: var(--accent); }
 
 .body { min-width: 0; width: 100%; }
 .body .kicker { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: .14em; text-transform: uppercase; display: inline-block; transition: opacity 160ms; border-bottom: none; }
