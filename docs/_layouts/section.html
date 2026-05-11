@@ -57,6 +57,6 @@
 
 {%- include footer.html -%}
 {%- include index_data.html -%}
-<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>
