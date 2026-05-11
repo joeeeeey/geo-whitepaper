@@ -19,13 +19,13 @@
 
   <article class="body">
     {%- if page.section_id -%}
-    <span class="kicker">/ {{ page.section_id }} · {{ page.section_name }} — {{ page.ord }}</span>
+    <a class="kicker" href="{{ '/sections/' | append: page.section_slug | append: '/' | relative_url }}">/ {{ page.section_id }} · {{ page.section_name }} — {{ page.ord }}</a>
     {%- endif -%}
     <h1>{{ page.title }}</h1>
     {%- if page.subtitle -%}<p class="subtitle">{{ page.subtitle }}</p>{%- endif -%}
     <div class="byline">
       <span>GEO 白皮书 · v2.4</span>
-      {%- if page.section_name -%}<span>{{ page.section_name }} · {{ page.ord }}</span>{%- endif -%}
+      {%- if page.section_name -%}<span>{{ page.section_name }} · {{ page.ord }} / 84</span>{%- endif -%}
       {%- if page.read_min -%}<span>{{ page.read_min }} min 阅读</span>{%- endif -%}
       {%- if page.word_count -%}<span>{{ page.word_count }} 字</span>{%- endif -%}
     </div>
@@ -51,18 +51,6 @@
       {%- endif -%}
     </div>
   </article>
-
-  <aside class="meta-rail" aria-label="文档元信息">
-    <div class="row"><span>版本</span><strong>v2.4</strong></div>
-    <div class="row"><span>章节</span><strong>{{ page.ord }} / 84</strong></div>
-    {%- if page.read_min -%}<div class="row"><span>阅读</span><strong>{{ page.read_min }} min</strong></div>{%- endif -%}
-    {%- if page.word_count -%}<div class="row"><span>字数</span><strong>{{ page.word_count }}</strong></div>{%- endif -%}
-    <div class="row"><span>主题</span><strong>{{ page.section_name | default: "未分类" }}</strong></div>
-    <div class="actions">
-      <a href="{{ '/sections/' | append: page.section_slug | append: '/' | relative_url }}">← {{ page.section_name }}</a>
-      <a href="{{ '/' | relative_url }}">↑ 返回首页</a>
-    </div>
-  </aside>
 </main>
 
 {%- include footer.html -%}
