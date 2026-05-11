@@ -1,4 +1,20 @@
-# 一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1/2）
+---
+layout: article
+title: 一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1-2）
+permalink: /pages/083-一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1-2）/
+page_num: 83
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.28'
+read_min: 14
+word_count: 6150
+is_featured: false
+prev_url: /pages/082-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）/
+prev_title: RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）
+next_url: /pages/084-一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（2-2）/
+next_title: 一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（2-2）
+---
 
 一点都不难，好论文会让你爽飞，我会用很多例子帮你秒懂，表怕～
 
@@ -274,6 +290,3 @@ MNIST是一个手写数字识别的数据集，是检验模型的“新手村”
 第八、九页：讨论与总结
 
 第八节：讨论 (Discussion)
----
-
-[上一页](082-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）.md) | [目录](../index.md) | [下一页](084-一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（2-2）.md)

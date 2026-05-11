@@ -1,4 +1,20 @@
-# 这篇论文为何是AI时代的“圣经”？为何Transformer模型横扫整个AI界？“注意力”凭什么改写AI历史？（1/2）
+---
+layout: article
+title: 这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）
+permalink: /pages/064-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）/
+page_num: 64
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.9'
+read_min: 18
+word_count: 8237
+is_featured: false
+prev_url: /pages/063-关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2-2）/
+prev_title: 关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2-2）
+next_url: /pages/065-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（2-2）/
+next_title: 这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（2-2）
+---
 
 下面我们一起来学习，这篇开创了现代人工智能新纪元的论文——《Attention Is All You Need》。
 
@@ -262,6 +278,3 @@ We are excited about the future of attention-based models and plan to apply them
 •奠定基础: 它所设计的Transformer架构，经过后续的演化（如BERT模型的双向编码器，GPT模型的单向解码器），成为了今天几乎所有大型语言模型（LLMs）和生成式AI的基石。
 
 学习这篇论文，就像是回到了一个伟大时代的开端。它不仅是一个模型，更是一种思想的胜利。希望这次逐页学习能帮助你深刻理解它的精髓。
----
-
-[上一页](063-关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2-2）.md) | [目录](../index.md) | [下一页](065-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（2-2）.md)

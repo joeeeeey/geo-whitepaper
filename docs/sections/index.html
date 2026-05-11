@@ -1,0 +1,47 @@
+---
+layout: default
+title: "章节索引"
+permalink: /sections/
+screen_label: "02 Sections"
+---
+
+<div class="page">
+  <header class="section-head" style="margin-top: var(--s-6);">
+    <div class="kicker">
+      <span class="ord">/ INDEX</span>
+      <span>全部章节</span>
+      <span style="color:var(--text-faint);">{{ site.data.structure.pages | size }} 章</span>
+    </div>
+    <div>
+      <h2>全部主题与章节</h2>
+      <p class="blurb">{{ site.data.structure.sections | size }} 个主题部分共 {{ site.data.structure.pages | size }} 章。按主题浏览，或使用 ⌘K 跳读。</p>
+    </div>
+  </header>
+
+  {%- for s in site.data.structure.sections -%}
+  <section class="block" id="sec-{{ s.id }}">
+    <div class="section-head">
+      <div class="kicker">
+        <span class="ord" style="color:{{ s.color }};">/ {{ s.id }}</span>
+        <span>{{ s.name }}</span>
+        <span style="color:var(--text-faint);">{{ s.count }} 章 · ~{{ s.read_hours }}h</span>
+      </div>
+      <div>
+        <h2><a href="{{ '/sections/' | append: s.slug | append: '/' | relative_url }}" style="color:inherit;">{{ s.headline }}</a></h2>
+        <p class="blurb">{{ s.blurb }}</p>
+      </div>
+    </div>
+    <div class="chapter-grid">
+      {%- for p in site.data.structure.pages -%}
+        {%- if p.section_id == s.id -%}
+        <a class="chapter-card" href="{{ p.url | relative_url }}">
+          <span class="ord">{{ p.ord }}</span>
+          <h3>{{ p.title }}</h3>
+          <div class="foot"><span>{{ p.read_min }} min</span><span>{{ p.tag | default: '阅读' }}</span></div>
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endfor -%}
+</div>

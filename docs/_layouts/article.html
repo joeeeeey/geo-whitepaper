@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}" data-baseurl="{{ site.baseurl }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body data-screen-label="03 Article">
+<a href="#main" class="skip-link">跳到正文</a>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<div class="progress-bar" aria-hidden="true"><div class="fill"></div></div>
+
+{%- include nav.html -%}
+
+<main id="main" class="article">
+  <aside class="outline" aria-label="文章大纲">
+    <div class="head">本页大纲</div>
+    <ol></ol>
+  </aside>
+
+  <article class="body">
+    {%- if page.section_id -%}
+    <span class="kicker">/ {{ page.section_id }} · {{ page.section_name }} — {{ page.ord }}</span>
+    {%- endif -%}
+    <h1>{{ page.title }}</h1>
+    {%- if page.subtitle -%}<p class="subtitle">{{ page.subtitle }}</p>{%- endif -%}
+    <div class="byline">
+      <span>GEO 白皮书 · v2.4</span>
+      {%- if page.section_name -%}<span>{{ page.section_name }} · {{ page.ord }}</span>{%- endif -%}
+      {%- if page.read_min -%}<span>{{ page.read_min }} min 阅读</span>{%- endif -%}
+      {%- if page.word_count -%}<span>{{ page.word_count }} 字</span>{%- endif -%}
+    </div>
+
+    {{ content }}
+
+    <div class="pager">
+      {%- if page.prev_url -%}
+      <a href="{{ page.prev_url | relative_url }}">
+        <span>← 上一章</span>
+        <strong>{{ page.prev_title }}</strong>
+      </a>
+      {%- else -%}
+      <a class="placeholder"><span>← 起点</span><strong>这是第一章</strong></a>
+      {%- endif -%}
+      {%- if page.next_url -%}
+      <a href="{{ page.next_url | relative_url }}">
+        <span>下一章 →</span>
+        <strong>{{ page.next_title }}</strong>
+      </a>
+      {%- else -%}
+      <a class="placeholder"><span>终点 →</span><strong>已读完最后一章</strong></a>
+      {%- endif -%}
+    </div>
+  </article>
+
+  <aside class="meta-rail" aria-label="文档元信息">
+    <div class="row"><span>版本</span><strong>v2.4</strong></div>
+    <div class="row"><span>章节</span><strong>{{ page.ord }} / 84</strong></div>
+    {%- if page.read_min -%}<div class="row"><span>阅读</span><strong>{{ page.read_min }} min</strong></div>{%- endif -%}
+    {%- if page.word_count -%}<div class="row"><span>字数</span><strong>{{ page.word_count }}</strong></div>{%- endif -%}
+    <div class="row"><span>主题</span><strong>{{ page.section_name | default: "未分类" }}</strong></div>
+    <div class="actions">
+      <a href="{{ '/sections/' | append: page.section_slug | append: '/' | relative_url }}">← {{ page.section_name }}</a>
+      <a href="{{ '/' | relative_url }}">↑ 返回首页</a>
+    </div>
+  </aside>
+</main>
+
+{%- include footer.html -%}
+{%- include index_data.html -%}
+<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<script>
+window.GEO_SECTIONS = [
+{%- for s in site.data.structure.sections -%}
+  { id: "{{ s.id }}", name: {{ s.name | jsonify }}, color: "{{ s.color }}", count: {{ s.count }}, angle: {{ s.angle }}, r: {{ s.radius }} },
+{%- endfor -%}
+];
+window.GEO_INDEX = [
+{%- for p in site.data.structure.pages -%}
+  { n: "{{ p.ord }}", t: {{ p.title | jsonify }}, s: {{ p.section_name | jsonify }}, href: "{{ p.url | relative_url }}" },
+{%- endfor -%}
+];
+</script>

@@ -1,4 +1,20 @@
-# ChatGPT与Google：搜索性能与用户体验的比较研究
+---
+layout: article
+title: ChatGPT与Google-搜索性能与用户体验的比较研究
+permalink: /pages/048-ChatGPT与Google-搜索性能与用户体验的比较研究/
+page_num: 48
+section_id: '05'
+section_name: GEO 论文
+section_slug: papers
+ord: '05.6'
+read_min: 9
+word_count: 4110
+is_featured: false
+prev_url: /pages/047-Search-o1-具备代理式检索增强的超大推理模型/
+prev_title: Search-o1-具备代理式检索增强的超大推理模型
+next_url: /pages/049-AI搜索系统中的新闻来源引用模式/
+next_title: AI搜索系统中的新闻来源引用模式
+---
 
 论文原文：
 
@@ -145,7 +161,3 @@
 总结与启示
 
 这篇论文以严谨的数据、扎实的实验和深刻的社会观察，为我们揭示了AI搜索工具与传统搜索引擎的本质差异及未来趋势。对于中国AI创业者和技术开发者而言，最值得借鉴的，是作者对用户体验、社会公平和技术责任的全面思考。我们不仅要做“更强”的AI，更要做“更善”的AI——让技术真正成为认知升级和社会进步的引擎。
-
----
-
-[上一页](047-Search-o1-具备代理式检索增强的超大推理模型.md) | [目录](../index.md) | [下一页](049-AI搜索系统中的新闻来源引用模式.md)

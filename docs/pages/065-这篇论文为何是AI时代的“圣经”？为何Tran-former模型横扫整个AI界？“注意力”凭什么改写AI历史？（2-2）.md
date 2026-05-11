@@ -1,4 +1,20 @@
-# 这篇论文为何是AI时代的“圣经”？为何Transformer模型横扫整个AI界？“注意力”凭什么改写AI历史？（2/2）
+---
+layout: article
+title: 这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（2-2）
+permalink: /pages/065-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（2-2）/
+page_num: 65
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.10'
+read_min: 2
+word_count: 248
+is_featured: false
+prev_url: /pages/064-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）/
+prev_title: 这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）
+next_url: /pages/066-一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1-2）/
+next_title: 一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1-2）
+---
 
 如果觉得本文还不错，记得关注我，一起轻松享受经典论文
 
@@ -21,7 +37,3 @@
 3.时间顺序，出现更早的留言，会被优先处理
 
 码字不易，传播时请注明出处
-
----
-
-[上一页](064-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）.md) | [目录](../index.md) | [下一页](066-一文读懂蒸馏技术、暗知识。大神辛顿Hinton的神作，给中国打开了条路（人话解读论文）（1-2）.md)

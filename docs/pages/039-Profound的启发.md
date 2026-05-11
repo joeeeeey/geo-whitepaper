@@ -1,4 +1,20 @@
-# Profound的启发
+---
+layout: article
+title: Profound的启发
+permalink: /pages/039-Profound的启发/
+page_num: 39
+section_id: '04'
+section_name: GEO 随记
+section_slug: field-notes
+ord: '04.11'
+read_min: 3
+word_count: 1145
+is_featured: false
+prev_url: /pages/038-关于GEO的一些分享/
+prev_title: 关于GEO的一些分享
+next_url: /pages/040-GEO来了/
+next_title: GEO来了
+---
 
 来源：https://jiahejiaoyu.feishu.cn/docx/YHOHd1TLyom6KDxQY8Ac8m4hngf#Uh5YdFoYvoCTIbx1p8jcIQ5Ungb
 
@@ -35,7 +51,3 @@ Profound很好的把握住了这个机遇：
 1. 数据壁垒来自“主动提问”，被动等AI抓取不够，要主动向各大AI提结构化查询，长期沉淀“问题→答案→引用源”的私有数据库，这是最难被复制的护城河
 
 1. 叙事从“工具”升级为“收入引擎”，不只是卖产品功能，核心是卖“把AI里的答案位变成你的新增长渠道”，定位一旦从工具变渠道，LTV与议价权都会上一个量级，Profound提供了标准Saas订阅模式（499美元/月）和大客户定制模式，既有标准化，又有针对大预算的定制服务模式
-
----
-
-[上一页](038-关于GEO的一些分享.md) | [目录](../index.md) | [下一页](040-GEO来了.md)

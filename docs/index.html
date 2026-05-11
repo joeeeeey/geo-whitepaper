@@ -1,0 +1,120 @@
+---
+layout: default
+title: "AI 搜索时代的品牌增长地图"
+screen_label: "01 Publication index"
+permalink: /
+---
+
+<!-- HERO -->
+<header class="hero">
+  <canvas class="particles" aria-hidden="true"></canvas>
+  <div>
+    <div class="meta">
+      <span class="pulse">LIVE · v2.4 / 2025</span>
+      <span>84 章 · 6 部分</span>
+      <span>EST. 阅读 ~6 小时</span>
+    </div>
+    <h1>GEO <em>白皮书</em><br/>AI 搜索时代的<br/>品牌增长地图</h1>
+    <p class="lede">当对话式 AI 取代关键词检索成为新入口，引用而非排名定义品牌可见度。本图谱由 84 篇互联章节构成，覆盖原理、方法、度量与案例。</p>
+    <div class="ctas">
+      {%- assign first = site.data.structure.pages | first -%}
+      <a class="btn btn-pri" href="{{ first.url | relative_url }}">进入阅读 →</a>
+      <a class="btn btn-gh" href="{{ '/sections/' | relative_url }}">浏览章节索引</a>
+    </div>
+  </div>
+  <div class="hero-side" aria-hidden="true">
+    <div class="ring r2"></div>
+    <div class="ring r1"></div>
+    <div class="nucleus"></div>
+    {%- for s in site.data.structure.sections limit:6 -%}
+      {%- assign positions = "a v m r a v" | split: " " -%}
+      {%- assign cls = positions[forloop.index0] -%}
+      {%- assign style_list = "left:18%;top:22%;|right:8%;top:30%;|left:6%;bottom:34%;|right:14%;bottom:20%;|left:38%;bottom:6%;|right:38%;top:6%;" | split: "|" -%}
+      <div class="node {{ cls }}" style="{{ style_list[forloop.index0] }}">{{ s.id }} · {{ s.short }}</div>
+    {%- endfor -%}
+  </div>
+</header>
+
+<div class="page">
+  <!-- STATS -->
+  <section class="block" aria-label="知识摘要">
+    <div class="stat-row">
+      <div class="stat"><span class="num"><em>{{ site.data.structure.pages | size }}</em></span><span class="lbl">章节</span></div>
+      <div class="stat"><span class="num">{{ site.data.structure.sections | size }}</span><span class="lbl">主题部分</span></div>
+      <div class="stat"><span class="num">~{{ site.data.structure.total_read_hours }}h</span><span class="lbl">通读时长</span></div>
+      <div class="stat"><span class="num">v2.4</span><span class="lbl">2025 修订</span></div>
+    </div>
+  </section>
+
+  <!-- GRAPH TOC -->
+  <section class="block" id="graph">
+    <div class="section-head">
+      <div class="kicker"><span class="ord">/ 00</span><span>知识图谱</span></div>
+      <div>
+        <h2>从核心到分支：可视化目录</h2>
+        <p class="blurb">中心节点为 GEO 主题，{{ site.data.structure.sections | size }} 个一级分支按主题色编码。点击右侧图例可进入对应章节列表。</p>
+      </div>
+    </div>
+    <div class="graph-toc">
+      <ul class="legend">
+        {%- for s in site.data.structure.sections -%}
+        <li{% if forloop.first %} class="active"{% endif %}>
+          <span class="sw" style="background:{{ s.color }}"></span>
+          <a href="{{ '/sections/' | append: s.slug | append: '/' | relative_url }}" style="display:flex;flex:1;align-items:center;">
+            <span><span class="ord">{{ s.id }}</span>{{ s.name }}<span class="count">· {{ s.count }}</span></span>
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+      <div class="canvas-wrap">
+        <canvas></canvas>
+        <span class="hint">animated · auto-rotating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section class="block" id="chapters">
+    <div class="section-head">
+      <div class="kicker"><span class="ord">/ 01</span><span>精选入口</span></div>
+      <div>
+        <h2>从这里开始读</h2>
+        <p class="blurb">如果你是第一次接触 GEO，按编号顺序通读；如果带着问题来，跳读以下每个部分的首章。</p>
+      </div>
+    </div>
+    <div class="chapter-grid">
+      {%- for s in site.data.structure.sections -%}
+        {%- assign sec_id = s.id -%}
+        {%- for p in site.data.structure.pages -%}
+          {%- if p.section_id == sec_id and p.is_featured -%}
+            <a class="chapter-card" href="{{ p.url | relative_url }}">
+              <span class="ord">{{ p.ord }}</span>
+              <h3>{{ p.title }}</h3>
+              <div class="foot"><span>{{ p.section_name }}</span><span>{{ p.read_min }} min</span></div>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <!-- SECTION CARDS -->
+  <section class="block" id="sections">
+    <div class="section-head">
+      <div class="kicker"><span class="ord">/ 02</span><span>六个主题</span></div>
+      <div>
+        <h2>按主题深入</h2>
+        <p class="blurb">每个主题独立成卷，可按顺序通读，也可单点切入。</p>
+      </div>
+    </div>
+    <div class="chapter-grid">
+      {%- for s in site.data.structure.sections -%}
+      <a class="chapter-card" href="{{ '/sections/' | append: s.slug | append: '/' | relative_url }}">
+        <span class="ord" style="color:{{ s.color }};">{{ s.id }} · {{ s.name }}</span>
+        <h3>{{ s.headline }}</h3>
+        <div class="foot"><span>{{ s.count }} 章</span><span>~{{ s.read_hours }}h</span></div>
+      </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>

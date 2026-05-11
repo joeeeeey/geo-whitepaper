@@ -1,4 +1,20 @@
-# GEO与SEO
+---
+layout: article
+title: GEO与SEO
+permalink: /pages/032-GEO与SEO/
+page_num: 32
+section_id: '04'
+section_name: GEO 随记
+section_slug: field-notes
+ord: '04.4'
+read_min: 2
+word_count: 695
+is_featured: false
+prev_url: /pages/031-GEO前端指标/
+prev_title: GEO前端指标
+next_url: /pages/033-AI搜索/
+next_title: AI搜索
+---
 
 1. 无论SEO还是GEO，决定能否被AI引用的首要因素之一，还是内容质量
 
@@ -23,7 +39,3 @@
 1. 国内AI幻觉多与搜索服务能力与成本有关，模型常粗略聚合摘要，这样也容易出错，我们曾实验过GEO霸屏的效果，就是利用这种“漏洞”
 
 1. 近期做了一个关于AI摘要的GEO实验，最终数据发现，AI摘要对AI搜索的权重影响比想象的要大
-
----
-
-[上一页](031-GEO前端指标.md) | [目录](../index.md) | [下一页](033-AI搜索.md)

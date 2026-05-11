@@ -1,4 +1,20 @@
-# 关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2/2）
+---
+layout: article
+title: 关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2-2）
+permalink: /pages/063-关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（2-2）/
+page_num: 63
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.8'
+read_min: 2
+word_count: 510
+is_featured: false
+prev_url: /pages/062-关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（1-2）/
+prev_title: 关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（1-2）
+next_url: /pages/064-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）/
+next_title: 这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）
+---
 
 它最大的贡献在于：
 
@@ -29,7 +45,3 @@
 3.时间顺序，出现更早的留言，会被优先处理
 
 码字不易，传播时请注明出处 如果觉得本文还不错，记得关注我
-
----
-
-[上一页](062-关于AI联网搜索是如何实现的，细品，精华巨多。解读OpenAI出品的《WebGPT》（1-2）.md) | [目录](../index.md) | [下一页](064-这篇论文为何是AI时代的“圣经”？为何Tran-former模型横扫整个AI界？“注意力”凭什么改写AI历史？（1-2）.md)

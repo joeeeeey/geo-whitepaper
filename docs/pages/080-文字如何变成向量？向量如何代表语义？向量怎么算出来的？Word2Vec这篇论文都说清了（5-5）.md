@@ -1,4 +1,20 @@
-# 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5/5）
+---
+layout: article
+title: 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5-5）
+permalink: /pages/080-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5-5）/
+page_num: 80
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.25'
+read_min: 2
+word_count: 513
+is_featured: false
+prev_url: /pages/079-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（4-5）/
+prev_title: 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（4-5）
+next_url: /pages/081-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（1-2）/
+next_title: RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（1-2）
+---
 
 恭喜你！
 
@@ -37,7 +53,3 @@
 3.时间顺序，出现更早的留言，会被优先处理
 
 码字不易，传播时请注明出处 如果觉得本文还不错，记得关注我
-
----
-
-[上一页](079-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（4-5）.md) | [目录](../index.md) | [下一页](081-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（1-2）.md)

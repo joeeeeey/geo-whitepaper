@@ -1,3 +1,6 @@
 raw/cookies.txt
 raw/doc_page.html
 .DS_Store
+docs/_site/
+.jekyll-cache/
+.sass-cache/

@@ -1,4 +1,20 @@
-# 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（1/5）
+---
+layout: article
+title: 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（1-5）
+permalink: /pages/076-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（1-5）/
+page_num: 76
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.21'
+read_min: 12
+word_count: 5290
+is_featured: false
+prev_url: /pages/075-DeepSeek最新论文，提升AI“判断力”的新方法（确实有货）。据说导致了Altman紧急推翻发布计划/
+prev_title: DeepSeek最新论文，提升AI“判断力”的新方法（确实有货）。据说导致了Altman紧急推翻发布计划
+next_url: /pages/077-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（2-5）/
+next_title: 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（2-5）
+---
 
 一点都不难，好论文会让你爽飞，我会用很多例子帮你秒懂，表怕～
 
@@ -261,6 +277,3 @@ vector(“King”) - vector(“Man”) + vector(“Woman”) results in a vector
 ---
 
 第四页：两大创新模型登场——CBOW 和 Skip-gram
----
-
-[上一页](075-DeepSeek最新论文，提升AI“判断力”的新方法（确实有货）。据说导致了Altman紧急推翻发布计划.md) | [目录](../index.md) | [下一页](077-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（2-5）.md)

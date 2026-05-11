@@ -1,4 +1,20 @@
-# Search-o1：具备代理式检索增强的超大推理模型
+---
+layout: article
+title: Search-o1-具备代理式检索增强的超大推理模型
+permalink: /pages/047-Search-o1-具备代理式检索增强的超大推理模型/
+page_num: 47
+section_id: '05'
+section_name: GEO 论文
+section_slug: papers
+ord: '05.5'
+read_min: 11
+word_count: 4847
+is_featured: false
+prev_url: /pages/046-操纵大型语言模型以提升产品可见度/
+prev_title: 操纵大型语言模型以提升产品可见度
+next_url: /pages/048-ChatGPT与Google-搜索性能与用户体验的比较研究/
+next_title: ChatGPT与Google-搜索性能与用户体验的比较研究
+---
 
 论文附件：
 
@@ -139,7 +155,3 @@
 四、总结精华
 
 通过本次深度解读，我们不仅全面还原了Search-o1的技术创新和实验成就，更揭示了AI推理范式的重大转变。对于中国AI创业者和研究者来说，Search-o1不仅是一次模型升级，更是一次认知跃迁。它让我们看到，AI未来的核心竞争力，在于“主动获取、动态融合、连贯推理”，而不仅仅是算力和数据。无论是学术探索还是产业落地，这种范式都值得我们持续关注和深度投入。
-
----
-
-[上一页](046-操纵大型语言模型以提升产品可见度.md) | [目录](../index.md) | [下一页](048-ChatGPT与Google-搜索性能与用户体验的比较研究.md)

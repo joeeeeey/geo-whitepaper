@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}" data-baseurl="{{ site.baseurl }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body data-screen-label="02 Section landing">
+<a href="#main" class="skip-link">跳到正文</a>
+<div class="grid-bg" aria-hidden="true"></div>
+
+{%- include nav.html -%}
+
+<main id="main" class="page">
+  <header class="section-head" style="margin-top: var(--s-6);">
+    <div class="kicker">
+      <span class="ord">/ {{ page.section_id }}</span>
+      <span>SECTION · {{ page.title }}</span>
+      <span style="color:var(--text-faint);">{{ page.chapter_count }} 章</span>
+    </div>
+    <div>
+      <h2>{{ page.section_headline }}</h2>
+      <p class="blurb">{{ page.section_blurb }}</p>
+    </div>
+  </header>
+
+  <section class="block" style="margin-top: var(--s-7);">
+    <div class="chapter-grid">
+      {%- for p in site.data.structure.pages -%}
+        {%- if p.section_id == page.section_id -%}
+          <a class="chapter-card" href="{{ p.url | relative_url }}">
+            <span class="ord">{{ p.ord }}</span>
+            <h3>{{ p.title }}</h3>
+            <div class="foot"><span>{{ p.read_min }} min</span><span>{{ p.tag | default: '阅读' }}</span></div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="pager" style="margin-top: var(--s-7);">
+      <a href="{{ '/' | relative_url }}">
+        <span>← 返回图谱</span>
+        <strong>所有章节</strong>
+      </a>
+      {%- if page.first_chapter_url -%}
+      <a href="{{ page.first_chapter_url | relative_url }}">
+        <span>开始阅读 →</span>
+        <strong>{{ page.first_chapter_ord }} {{ page.first_chapter_title }}</strong>
+      </a>
+      {%- endif -%}
+    </div>
+  </section>
+</main>
+
+{%- include footer.html -%}
+{%- include index_data.html -%}
+<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<nav class="nav" aria-label="主导航">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="brand"><span class="dot"></span> Cyber Atlas · GEO</a>
+    <div class="links">
+      <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>图谱</a>
+      <a href="{{ '/sections/' | relative_url }}"{% if page.layout == "section" or page.url == "/sections/" %} aria-current="page"{% endif %}>章节</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>关于</a>
+      <a href="https://github.com/joeeeeey/geo-whitepaper" target="_blank" rel="noreferrer">源代码</a>
+    </div>
+    <div class="right">
+      <button class="search" data-search aria-label="搜索 (⌘K)"><span>搜索章节</span><kbd>⌘K</kbd></button>
+      <button class="menu-btn" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>

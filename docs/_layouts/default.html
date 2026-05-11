@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}" data-baseurl="{{ site.baseurl }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body{% if page.screen_label %} data-screen-label="{{ page.screen_label }}"{% endif %}>
+<a href="#main" class="skip-link">跳到正文</a>
+<div class="grid-bg" aria-hidden="true"></div>
+
+{%- include nav.html -%}
+
+<main id="main">
+  {{ content }}
+</main>
+
+{%- include footer.html -%}
+{%- include index_data.html -%}
+<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</body>
+</html>

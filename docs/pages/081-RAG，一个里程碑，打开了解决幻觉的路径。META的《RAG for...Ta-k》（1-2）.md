@@ -1,4 +1,20 @@
-# RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Task》（1/2）
+---
+layout: article
+title: RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（1-2）
+permalink: /pages/081-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（1-2）/
+page_num: 81
+section_id: '06'
+section_name: 案例与参考
+section_slug: cases-and-refs
+ord: '06.26'
+read_min: 16
+word_count: 7172
+is_featured: true
+prev_url: /pages/080-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5-5）/
+prev_title: 文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5-5）
+next_url: /pages/082-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）/
+next_title: RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）
+---
 
 我会用很多例子帮你秒懂，表怕～
 
@@ -261,6 +277,3 @@ Are you ready？
 论文的深远影响与总结
 
 RAG不仅仅是一篇论文，它开创了一个重要的研究方向。在它之后，几乎所有的大型科技公司和研究机构都开始研究和应用检索增强技术。今天的很多大型语言模型（包括一些版本的ChatGPT、DeepSeek等）在回答需要实时或专业知识的问题时，其背后都有类似RAG的机制在工作（即“联网搜索”功能）。
----
-
-[上一页](080-文字如何变成向量？向量如何代表语义？向量怎么算出来的？Word2Vec这篇论文都说清了（5-5）.md) | [目录](../index.md) | [下一页](082-RAG，一个里程碑，打开了解决幻觉的路径。META的《RAG for...Ta-k》（2-2）.md)

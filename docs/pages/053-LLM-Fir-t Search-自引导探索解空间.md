@@ -1,4 +1,20 @@
-# LLM-First Search：自引导探索解空间
+---
+layout: article
+title: LLM-Fir-t Search-自引导探索解空间
+permalink: /pages/053-LLM-Fir-t Search-自引导探索解空间/
+page_num: 53
+section_id: '05'
+section_name: GEO 论文
+section_slug: papers
+ord: '05.11'
+read_min: 11
+word_count: 5131
+is_featured: false
+prev_url: /pages/052-电商搜索体验的智能跃迁/
+prev_title: 电商搜索体验的智能跃迁
+next_url: /pages/054-搜索引擎服务与大语言模型的融合-愿景与挑战/
+next_title: 搜索引擎服务与大语言模型的融合-愿景与挑战
+---
 
 论文信息
 
@@ -229,7 +245,3 @@
 这篇论文不仅是一次技术创新，更是对AI自主智能的深刻探索。对于中国AI创业者来说，LFS的“自我驱动”思想，既是技术突破，也是产品落地的关键方向。
 
 它让我们看到，未来的AI不再是“被动工具”，而是“主动伙伴”，能在复杂环境中自主探索、灵活决策。希望这篇深度解读，能帮助你更好地理解LFS的学术价值和应用前景，激发更多创新思考。
-
----
-
-[上一页](052-电商搜索体验的智能跃迁.md) | [目录](../index.md) | [下一页](054-搜索引擎服务与大语言模型的融合-愿景与挑战.md)

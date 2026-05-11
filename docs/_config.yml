@@ -1,4 +1,38 @@
-title: GEO Whitepaper
-description: Markdown export of GEO whitepaper notes
-theme: minima
+title: "GEO 白皮书 · Cyber Atlas"
+description: "AI 搜索时代的品牌增长新范式 — 一份 84 章节的 GEO 知识图谱。"
+baseurl: "/geo-whitepaper"
+url: "https://joeeeeey.github.io"
+lang: zh-CN
+
+# Disable the default theme; we ship our own layouts/includes/assets.
+theme: ~
+
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Pretty URLs.
+permalink: pretty
+
+# Per-collection defaults: articles use the article layout, sections use the section layout.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "pages"
+    values:
+      layout: article
+  - scope:
+      path: "sections"
+    values:
+      layout: section
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

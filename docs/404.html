@@ -1,0 +1,30 @@
+---
+layout: default
+title: "404 · 节点丢失"
+permalink: /404.html
+screen_label: "04 Not found"
+---
+
+<main class="notfound">
+  <div class="glyph">404</div>
+  <h1>节点丢失<br/><span style="display:inline-block;margin-top:8px;font-family:var(--font-mono);font-size:.46em;font-weight:500;letter-spacing:.18em;color:var(--text-muted);">NODE_NOT_FOUND</span></h1>
+  <p>这条路径不在图谱中。可能是链接已迁移，也可能是节点尚未发布。试试搜索，或回到主图谱。</p>
+  <div class="actions">
+    <a class="btn btn-pri" href="{{ '/' | relative_url }}">返回图谱首页</a>
+    <button class="btn btn-gh" data-search>搜索章节 ⌘K</button>
+  </div>
+
+  <section class="suggest">
+    <div class="label">/ 建议入口</div>
+    <div class="chapter-grid">
+      {%- assign featured = site.data.structure.pages | where: "is_featured", true -%}
+      {%- for p in featured limit:3 -%}
+      <a class="chapter-card" href="{{ p.url | relative_url }}">
+        <span class="ord">{{ p.ord }}</span>
+        <h3>{{ p.title }}</h3>
+        <div class="foot"><span>{{ p.section_name }}</span><span>{{ p.read_min }} min</span></div>
+      </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</main>
