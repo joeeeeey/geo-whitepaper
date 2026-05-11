@@ -11,6 +11,38 @@
   const BASE = (document.documentElement.dataset.baseurl || "").replace(/\/$/, "");
   const url = (p) => BASE + (p.startsWith("/") ? p : "/" + p);
 
+  /* Read CSS custom properties so canvas drawings track the theme. */
+  function themeColors() {
+    const css = getComputedStyle(document.documentElement);
+    const rgb = (css.getPropertyValue("--particle-rgb") || "110,243,255").trim();
+    return {
+      particleRGB: rgb,
+      // Map directly to rgba() strings the canvases consume.
+      particleLine: `rgba(${rgb},.16)`,
+      particleDot: `rgba(${rgb},.7)`,
+      graphRingStroke: `rgba(${rgb},0.08)`,
+      graphLinkStroke: `rgba(${rgb},0.10)`,
+      graphSubStroke: `rgba(${rgb},0.07)`,
+      graphCenterFill: `rgb(${rgb})`,
+      graphCenterShadow: `rgba(${rgb},.7)`,
+      graphLabel: (css.getPropertyValue("--text-secondary") || "#aab2c0").trim() || "#aab2c0",
+      graphCenterLabel: (css.getPropertyValue("--text-muted") || "#8a93a3").trim(),
+    };
+  }
+
+  /* -------- Theme toggle -------- */
+  function mountThemeToggle() {
+    const btn = document.querySelector("[data-theme-toggle]");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = cur === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("geo-theme", next); } catch (e) {}
+      document.dispatchEvent(new CustomEvent("geo:theme", { detail: { theme: next } }));
+    });
+  }
+
   /* -------- Mobile drawer -------- */
   function mountDrawer() {
     const btn = $(".menu-btn");
@@ -207,6 +239,7 @@
     let W = 0,
       H = 0,
       dpr = Math.min(2, window.devicePixelRatio || 1);
+    let colors = themeColors();
     const resize = () => {
       const r = c.getBoundingClientRect();
       W = r.width;
@@ -233,7 +266,7 @@
         if (p.x < 0 || p.x > W) p.vx *= -1;
         if (p.y < 0 || p.y > H) p.vy *= -1;
       });
-      ctx.strokeStyle = "rgba(110,243,255,.16)";
+      ctx.strokeStyle = colors.particleLine;
       ctx.lineWidth = 1;
       for (let i = 0; i < N; i++)
         for (let j = i + 1; j < N; j++) {
@@ -249,7 +282,7 @@
           }
         }
       ctx.globalAlpha = 1;
-      ctx.fillStyle = "rgba(110,243,255,.7)";
+      ctx.fillStyle = colors.particleDot;
       pts.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.2, 0, 7);
@@ -263,6 +296,7 @@
       resize();
       tick();
     });
+    document.addEventListener("geo:theme", () => { colors = themeColors(); });
   }
 
   /* -------- Graph TOC -------- */
@@ -278,6 +312,7 @@
       dpr = Math.min(2, window.devicePixelRatio || 1);
     let t = 0,
       raf;
+    let colors = themeColors();
     function resize() {
       const r = c.getBoundingClientRect();
       W = r.width;
@@ -292,7 +327,7 @@
       ctx.clearRect(0, 0, W, H);
       const cx = W / 2,
         cy = H / 2;
-      ctx.strokeStyle = "rgba(110,243,255,0.08)";
+      ctx.strokeStyle = colors.graphRingStroke;
       [120, 170, 220].forEach((r) => {
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, 7);
@@ -302,7 +337,7 @@
         const a = s.angle + (reduced ? 0 : t * 0.0003);
         const x = cx + Math.cos(a) * s.r,
           y = cy + Math.sin(a) * s.r;
-        ctx.strokeStyle = "rgba(255,255,255,0.08)";
+        ctx.strokeStyle = colors.graphLinkStroke;
         ctx.beginPath();
         ctx.moveTo(cx, cy);
         ctx.lineTo(x, y);
@@ -312,7 +347,7 @@
           const sr = s.r + 40 + (i % 2) * 14;
           const sx = cx + Math.cos(sa) * sr,
             sy = cy + Math.sin(sa) * sr;
-          ctx.strokeStyle = "rgba(255,255,255,0.05)";
+          ctx.strokeStyle = colors.graphSubStroke;
           ctx.beginPath();
           ctx.moveTo(x, y);
           ctx.lineTo(sx, sy);
@@ -323,14 +358,14 @@
           ctx.fill();
         }
       });
-      ctx.fillStyle = "rgba(110,243,255,1)";
-      ctx.shadowColor = "rgba(110,243,255,.7)";
+      ctx.fillStyle = colors.graphCenterFill;
+      ctx.shadowColor = colors.graphCenterShadow;
       ctx.shadowBlur = 18;
       ctx.beginPath();
       ctx.arc(cx, cy, 5, 0, 7);
       ctx.fill();
       ctx.shadowBlur = 0;
-      ctx.fillStyle = "#aab2c0";
+      ctx.fillStyle = colors.graphCenterLabel;
       ctx.font = "10px IBM Plex Mono, monospace";
       ctx.textAlign = "center";
       ctx.fillText("GEO 白皮书", cx, cy + 22);
@@ -345,7 +380,7 @@
         ctx.arc(x, y, 5, 0, 7);
         ctx.fill();
         ctx.shadowBlur = 0;
-        ctx.fillStyle = "#e7ecf3";
+        ctx.fillStyle = colors.graphLabel;
         ctx.font = "11px IBM Plex Mono, monospace";
         const align = Math.cos(a) >= 0 ? "left" : "right";
         ctx.textAlign = align;
@@ -362,10 +397,12 @@
       cancelAnimationFrame(raf);
       paint();
     });
+    document.addEventListener("geo:theme", () => { colors = themeColors(); if (reduced) paint(); });
   }
 
   /* -------- Boot -------- */
   document.addEventListener("DOMContentLoaded", () => {
+    mountThemeToggle();
     mountDrawer();
     mountPalette();
     mountProgress();

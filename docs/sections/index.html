@@ -31,13 +31,16 @@ screen_label: "02 Sections"
         <p class="blurb">{{ s.blurb }}</p>
       </div>
     </div>
-    <div class="chapter-grid">
+    <div class="chapter-list">
       {%- for p in site.data.structure.pages -%}
         {%- if p.section_id == s.id -%}
-        <a class="chapter-card" href="{{ p.url | relative_url }}">
+        <a class="chapter-row" href="{{ p.url | relative_url }}">
           <span class="ord">{{ p.ord }}</span>
-          <h3>{{ p.title }}</h3>
-          <div class="foot"><span>{{ p.read_min }} min</span><span>{{ p.tag | default: '阅读' }}</span></div>
+          <span class="row-title">{{ p.title }}</span>
+          <span class="row-meta">
+            <span>{{ p.read_min }} min</span>
+            <span class="tag">{{ p.tag | default: '阅读' }}</span>
+          </span>
         </a>
         {%- endif -%}
       {%- endfor -%}

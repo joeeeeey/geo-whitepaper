@@ -12,3 +12,15 @@
 />
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
+<script>
+  // Apply theme before paint to avoid FOUC. Default: light. Saved choice wins.
+  (function () {
+    try {
+      var saved = localStorage.getItem("geo-theme");
+      var theme = saved === "dark" || saved === "light" ? saved : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
