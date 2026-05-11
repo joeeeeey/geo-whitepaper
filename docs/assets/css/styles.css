@@ -327,8 +327,8 @@ section.block:first-of-type { margin-top: 0; }
 .graph-toc .legend .sw { width: 10px; height: 10px; border-radius: 2px; }
 .graph-toc .legend .ord { color: var(--accent); margin-right: 8px; }
 .graph-toc .legend .count { color: var(--text-muted); margin-left: 8px; }
-.graph-toc .canvas-wrap { position: relative; }
-.graph-toc canvas { width: 100%; height: 100%; min-height: 420px; }
+.graph-toc .canvas-wrap { position: relative; height: 420px; min-height: 0; overflow: hidden; }
+.graph-toc canvas { width: 100%; height: 100%; display: block; }
 .graph-toc .hint {
   position: absolute; bottom: 8px; right: 12px; font-family: var(--font-mono); font-size: 10px;
   letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint);
@@ -345,11 +345,13 @@ section.block:first-of-type { margin-top: 0; }
   box-shadow: 0 0 12px var(--accent-glow);
 }
 .article {
-  max-width: 1080px; margin: 0 auto;
+  max-width: 1128px; margin: 0 auto;
   padding: var(--s-9) clamp(20px, 4vw, 56px) var(--s-12);
-  display: grid; grid-template-columns: 200px minmax(0, 1fr);
+  display: grid; grid-template-columns: 200px minmax(0, 760px);
+  justify-content: center;
   gap: var(--s-9); align-items: start;
 }
+.article--no-outline { grid-template-columns: minmax(0, 760px); }
 .outline { position: sticky; top: 96px; font-family: var(--font-mono); font-size: 12px; max-height: calc(100vh - 120px); overflow-y: auto; }
 .outline .head { color: var(--text-faint); text-transform: uppercase; letter-spacing: .12em; margin-bottom: var(--s-3); font-size: 11px; }
 .outline ol { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
@@ -364,7 +366,7 @@ section.block:first-of-type { margin-top: 0; }
 .outline li .min { font-size: 10px; color: var(--text-faint); flex: 0 0 auto; white-space: nowrap; }
 .outline li > span:first-child { flex: 1; min-width: 0; word-break: break-word; }
 
-.body { min-width: 0; width: 100%; max-width: 760px; }
+.body { min-width: 0; width: 100%; }
 .body .kicker { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: .14em; text-transform: uppercase; display: inline-block; transition: opacity 160ms; border-bottom: none; }
 .body a.kicker:hover { opacity: .75; border-bottom: none; }
 .body h1 { font-size: clamp(24px, 3.4vw, 36px); font-weight: 700; line-height: 1.22; letter-spacing: -.015em; margin: var(--s-3) 0 var(--s-4); color: var(--text-primary); }

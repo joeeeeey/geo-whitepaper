@@ -193,8 +193,9 @@
     });
     const heads = $$(".body h2[id]");
     if (!heads.length) {
-      const empty = $(".outline");
-      if (empty) empty.style.display = "none";
+      const outline = $(".outline");
+      if (outline) outline.remove();
+      $(".article")?.classList.add("article--no-outline");
       return;
     }
     list.innerHTML = heads
@@ -314,7 +315,11 @@
       raf;
     let colors = themeColors();
     function resize() {
-      const r = c.getBoundingClientRect();
+      // Read the wrapper's measured size, not the canvas's, so we never depend
+      // on the canvas's own intrinsic size (which would create a feedback loop
+      // where setting c.height grows the layout, which makes the next frame
+      // measure a taller canvas, and so on).
+      const r = (wrap.getBoundingClientRect());
       W = r.width;
       H = r.height || 420;
       c.width = W * dpr;
@@ -323,7 +328,6 @@
       ctx.scale(dpr, dpr);
     }
     function paint() {
-      resize();
       ctx.clearRect(0, 0, W, H);
       const cx = W / 2,
         cy = H / 2;
@@ -392,9 +396,11 @@
         raf = requestAnimationFrame(paint);
       }
     }
+    resize();
     paint();
     window.addEventListener("resize", () => {
       cancelAnimationFrame(raf);
+      resize();
       paint();
     });
     document.addEventListener("geo:theme", () => { colors = themeColors(); if (reduced) paint(); });
