@@ -1,0 +1,503 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+    "meta_map": {
+      "Jv85dXAeZoKJ7exJi4Yc4Edrnhf": {
+        "editor_id": "7499658444186583044",
+        "sub_type": 0,
+        "tenant_id": "7499658399807553540",
+        "update_time": "2026-05-09T14:25:28.674+08:00",
+        "edit_time": "2026-05-09T13:42:27.744+08:00",
+        "owner_id": "7499658444186583044",
+        "page_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+        "create_time": "2025-08-17T20:25:35.664+08:00",
+        "note_id": "0",
+        "product_mark": 0,
+        "source": 0,
+        "status": 0,
+        "creator_id": "7499658444186583044",
+        "title": "《GEO白皮书：AI搜索时代的品牌增长新范式》"
+      }
+    },
+    "preloadedImages": null,
+    "synced_block_url": {},
+    "type": "CLIENT_VARS",
+    "block_map": {
+      "XbFUdGNNHojJ6DxWFuPcqnGyn2b": {
+        "id": "XbFUdGNNHojJ6DxWFuPcqnGyn2b",
+        "version": 1,
+        "data": {
+          "text": {
+            "apool": {
+              "nextNum": 3,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ],
+                "1": [
+                  "bold",
+                  "true"
+                ],
+                "2": [
+                  "textHighlight",
+                  "rgb(216,57,49)"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0*1*2+k"
+              },
+              "text": {
+                "0": "如果本文还不错，请点个心 ，感谢你的支持"
+              }
+            }
+          },
+          "type": "text",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "comments": [],
+          "locked": false,
+          "hidden": false,
+          "author": "7499658444186583044",
+          "children": [],
+          "align": "left",
+          "revisions": [],
+          "folded": false
+        }
+      },
+      "NZSJd3vS1o4Hghxwi38cxrHhnEf": {
+        "id": "NZSJd3vS1o4Hghxwi38cxrHhnEf",
+        "version": 1,
+        "data": {
+          "type": "text",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "author": "7499658444186583044",
+          "folded": false,
+          "text": {
+            "apool": {
+              "nextNum": 1,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "text": {
+                "0": "很多论文可以改变世界，也可以很有启发，甚至只是挺好玩的， \n我会把晦涩难懂的论文，用简单的举例帮你秒懂"
+              },
+              "attribs": {
+                "0": "*0|1+u*0+l"
+              }
+            }
+          },
+          "align": "left",
+          "comments": [],
+          "revisions": [],
+          "locked": false,
+          "hidden": false,
+          "children": []
+        }
+      },
+      "UEvCd7X54o5nwexKau6cZFFonng": {
+        "id": "UEvCd7X54o5nwexKau6cZFFonng",
+        "version": 2,
+        "data": {
+          "text": {
+            "apool": {
+              "nextNum": 4,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ],
+                "1": [
+                  "bold",
+                  "true"
+                ],
+                "2": [
+                  "textHighlight",
+                  "rgb(143,149,158)"
+                ],
+                "3": [
+                  "textHighlightBackground",
+                  "rgb(247,105,100)"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0*1*2*3+j"
+              },
+              "text": {
+                "0": "关于\"论文很好懂\" （建议你仔细读读）"
+              }
+            }
+          },
+          "align": "center",
+          "folded": false,
+          "revisions": [],
+          "children": [],
+          "comments": [],
+          "locked": false,
+          "hidden": false,
+          "author": "7499658444186583044",
+          "type": "text",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf"
+        }
+      },
+      "Ezcadn7Hdo9xZox715hcclQOn5f": {
+        "id": "Ezcadn7Hdo9xZox715hcclQOn5f",
+        "version": 1,
+        "data": {
+          "locked": false,
+          "hidden": false,
+          "children": [],
+          "text": {
+            "apool": {
+              "nextNum": 1,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0+i"
+              },
+              "text": {
+                "0": "人手有限，我会按以下优先级原则处理："
+              }
+            }
+          },
+          "align": "left",
+          "type": "text",
+          "comments": [],
+          "author": "7499658444186583044",
+          "folded": false,
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "revisions": []
+        }
+      },
+      "MQ4YdLkA1ohPLxxNoW1cncwOnLg": {
+        "id": "MQ4YdLkA1ohPLxxNoW1cncwOnLg",
+        "version": 1,
+        "data": {
+          "revisions": [],
+          "locked": false,
+          "author": "7499658444186583044",
+          "children": [],
+          "text": {
+            "initialAttributedTexts": {
+              "text": {
+                "0": "如果你有想搞懂的论文， 请把免费下载链接写到评论中 ，我会在1-7天内为你解读。"
+              },
+              "attribs": {
+                "0": "*0+c*0*1*2+e*0+e"
+              }
+            },
+            "apool": {
+              "nextNum": 3,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ],
+                "1": [
+                  "bold",
+                  "true"
+                ],
+                "2": [
+                  "textHighlight",
+                  "rgb(216,57,49)"
+                ]
+              }
+            }
+          },
+          "align": "left",
+          "type": "text",
+          "comments": [],
+          "hidden": false,
+          "folded": false,
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf"
+        }
+      },
+      "NzSsd94hPoAQUwxtkpUc8BUZnId": {
+        "id": "NzSsd94hPoAQUwxtkpUc8BUZnId",
+        "version": 1,
+        "data": {
+          "children": [],
+          "align": "left",
+          "folded": false,
+          "type": "text",
+          "comments": [],
+          "revisions": [],
+          "locked": false,
+          "author": "7499658444186583044",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "hidden": false,
+          "text": {
+            "apool": {
+              "nextNum": 3,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ],
+                "1": [
+                  "bold",
+                  "true"
+                ],
+                "2": [
+                  "textHighlight",
+                  "rgb(216,57,49)"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0|1+f*0*1*2+q"
+              },
+              "text": {
+                "0": "码字不易，传播时请注明出处 \n如果觉得本文还不错，记得关注我，一起轻松享受经典论文"
+              }
+            }
+          }
+        }
+      },
+      "RTxzdfRthoygHcxlsDec8qkjn4f": {
+        "data": {
+          "type": "text",
+          "comments": [],
+          "children": [],
+          "align": "left",
+          "folded": false,
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "revisions": [],
+          "locked": false,
+          "hidden": false,
+          "author": "7499658444186583044",
+          "text": {
+            "apool": {
+              "nextNum": 1,
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ]
+              }
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0|2+1e*0+l"
+              },
+              "text": {
+                "0": "1.粉丝优先。关注我的用户，留言会被优先处理 \n2.点赞优先。留言点赞数量大的论文，会被优先处理 \n3.时间顺序，出现更早的留言，会被优先处理"
+              }
+            }
+          }
+        },
+        "id": "RTxzdfRthoygHcxlsDec8qkjn4f",
+        "version": 1
+      },
+      "W6rbdY93ootJz5xGjUUcJuABnVb": {
+        "id": "W6rbdY93ootJz5xGjUUcJuABnVb",
+        "version": 1,
+        "data": {
+          "type": "text",
+          "locked": false,
+          "author": "7499658444186583044",
+          "children": [],
+          "folded": false,
+          "align": "left",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "comments": [],
+          "revisions": [],
+          "hidden": false,
+          "text": {
+            "apool": {
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ]
+              },
+              "nextNum": 1
+            },
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": "*0+1s"
+              },
+              "text": {
+                "0": "“知识蒸馏”至今仍然是模型压缩、提升小模型性能、知识迁移等领域应用最广泛、最基础的技术之一，深刻地影响了整个深度学习领域的发展。"
+              }
+            }
+          }
+        }
+      },
+      "XJItdGgLnoCDfmx4t0Cc4oO5neg": {
+        "id": "XJItdGgLnoCDfmx4t0Cc4oO5neg",
+        "version": 1,
+        "data": {
+          "folded": false,
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "comments": [],
+          "locked": false,
+          "hidden": false,
+          "children": [],
+          "align": "",
+          "type": "text",
+          "revisions": [],
+          "author": "7499658444186583044",
+          "text": {
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": ""
+              },
+              "text": {
+                "0": ""
+              }
+            },
+            "apool": {
+              "nextNum": 0,
+              "numToAttrib": {}
+            }
+          }
+        }
+      },
+      "ASscdL37Po69aCxPxj3c0E6sn6e": {
+        "id": "ASscdL37Po69aCxPxj3c0E6sn6e",
+        "version": 1,
+        "data": {
+          "comments": [],
+          "revisions": [],
+          "hidden": false,
+          "children": [],
+          "text": {
+            "initialAttributedTexts": {
+              "attribs": {
+                "0": ""
+              },
+              "text": {
+                "0": ""
+              }
+            },
+            "apool": {
+              "nextNum": 0,
+              "numToAttrib": {}
+            }
+          },
+          "type": "text",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "locked": false,
+          "author": "7499658444186583044",
+          "align": "",
+          "folded": false
+        }
+      },
+      "Df85dwOmqohSNtxjyqfcfaDWnre": {
+        "id": "Df85dwOmqohSNtxjyqfcfaDWnre",
+        "version": 1,
+        "data": {
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "comments": [],
+          "locked": false,
+          "text": {
+            "apool": {
+              "numToAttrib": {
+                "0": [
+                  "author",
+                  "7499658444186583044"
+                ],
+                "1": [
+                  "bold",
+                  "true"
+                ],
+                "2": [
+                  "textHighlight",
+                  "rgb(216,57,49)"
+                ]
+              },
+              "nextNum": 3
+            },
+            "initialAttributedTexts": {
+              "text": {
+                "0": "如果觉得本文还不错，记得关注我，一起轻松享受经典论文"
+              },
+              "attribs": {
+                "0": "*0*1*2+q"
+              }
+            }
+          },
+          "align": "left",
+          "folded": false,
+          "type": "text",
+          "revisions": [],
+          "hidden": false,
+          "author": "7499658444186583044",
+          "children": []
+        }
+      },
+      "Z1g5d15pZovbJ3xOrsQc7jyanyd": {
+        "id": "Z1g5d15pZovbJ3xOrsQc7jyanyd",
+        "version": 1,
+        "data": {
+          "comments": [],
+          "locked": false,
+          "hidden": false,
+          "folded": false,
+          "type": "text",
+          "parent_id": "Jv85dXAeZoKJ7exJi4Yc4Edrnhf",
+          "revisions": [],
+          "author": "7499658444186583044",
+          "children": [],
+          "text": {
+            "apool": {
+              "nextNum": 0,
+              "numToAttrib": {}
+            },
+            "initialAttributedTexts": {
+              "text": {
+                "0": ""
+              },
+              "attribs": {
+                "0": ""
+              }
+            }
+          },
+          "align": ""
+        }
+      }
+    },
+    "block_sequence": [
+      "W6rbdY93ootJz5xGjUUcJuABnVb",
+      "Z1g5d15pZovbJ3xOrsQc7jyanyd",
+      "Df85dwOmqohSNtxjyqfcfaDWnre",
+      "XbFUdGNNHojJ6DxWFuPcqnGyn2b",
+      "UEvCd7X54o5nwexKau6cZFFonng",
+      "NZSJd3vS1o4Hghxwi38cxrHhnEf",
+      "MQ4YdLkA1ohPLxxNoW1cncwOnLg",
+      "Ezcadn7Hdo9xZox715hcclQOn5f",
+      "RTxzdfRthoygHcxlsDec8qkjn4f",
+      "ASscdL37Po69aCxPxj3c0E6sn6e",
+      "NzSsd94hPoAQUwxtkpUc8BUZnId",
+      "XJItdGgLnoCDfmx4t0Cc4oO5neg"
+    ],
+    "external_mention_url": null,
+    "mention_page_title": {},
+    "cursor": "w6wQbcKLw5YQS2fCnsKCD8OZw6vDixgFwo7Cug7DjhfClcOiw6wmERXDicKrw6vCnAgTw5AHw6nDmMK6ZTpNE8Kbwp_CqmrCosO0wpRgahvDiwLCoR5rB8O6IHhobHx_OBQFw4rCtMK7TzXDmVjCoVogPzTDhTpIwox5ExgUEGzCmsOHw6Igw6jCjcK_a0Z5w57DocOMwpbDhsKhBVhfZH7Crw",
+    "editor_map": null,
+    "skip_blocks": [],
+    "user_map": null,
+    "concurrent": true,
+    "next_cursors": [],
+    "has_more": false,
+    "structure_version": 4308
+  }
+}
